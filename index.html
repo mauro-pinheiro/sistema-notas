@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema de Notas</title>
+</head>
+
+<body>
+    <form id='form-aluno' onsubmit="turmaController.adiciona(event)">
+        <fieldset>
+            <legend>Aluno</legend>
+            <label>
+                Nome
+                <input id='nome' type="text" name='nome'>
+            </label>
+            <label>
+                Nota 1
+                <input id='nota-1' type="number" name='nota-1' min='0' max='100' step='1'>
+            </label>
+            <label>
+                Nota 2
+                <input id='nota-2' type="number" name='nota-2' min='0' max='100' step='1'>
+            </label>
+            <label>
+                Recuperacao
+                <input id='nota-rec' type="number" name='nota-rec' min='0' max='100' step='1'>
+            </label>
+            <label>
+                Frequência
+                <input id='frequencia' type="number" name='frequencia' min='0' max='100' step='1'>
+            </label>
+            <button id='add-button' type="submit">Adicionar</button>
+            <button id='clean-button' type="reset">Limpar</button>
+        </fieldset>
+    </form>
+    <div id='output'></div>
+
+    <script src='js/app/models/Aluno.js'></script>
+    <script src='js/app/models/Turma.js'></script>
+    <script src='js/app/controllers/TurmaController.js'></script>
+    <script src='js/app/views/TurmaView.js'></script>
+    <script>
+        let turmaController = new TurmaController()
+    </script>
+</body>
+
+</html>
