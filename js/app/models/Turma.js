@@ -1,13 +1,13 @@
 class Turma {
-    constructor() {
-        this._alunos = [];
-    }
+  constructor() {
+    this._alunos = [];
+  }
 
-    adiciona(aluno) {
-        this._alunos.push(aluno);
-    }
+  adiciona(aluno) {
+    this._alunos.push(aluno);
+  }
 
-    get alunos() {
-        return [].concat(this._alunos);
-    }
+  get alunos() {
+    return [].concat(this._alunos);
+  }
 }
